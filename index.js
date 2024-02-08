@@ -1,12 +1,12 @@
-import { pg_passwd } from "./secrets.js"
+//import { pg_passwd } from "./secrets.js"
 import knex_module from "knex"
 const knex = knex_module({
-  client: 'pg', version: '8.6',
+  client: 'mysql', version: '2.18',
   connection: {
     host: '127.0.0.1',
-    user: "postgres",
-    password: pg_passwd,
-    database: 'knex-test'
+    user: "root",
+    password: "password",
+    database: 'knex_test'
   }
 })
 
